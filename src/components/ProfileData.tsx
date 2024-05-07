@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import RepoCard from './RepoCard';
 
 function ProfileData() {
   const [user, setUser] = useState<any>({});
@@ -24,7 +25,7 @@ function ProfileData() {
 
   return (
     <>
-      <div className="mx-auto container flex p-4 gap-8 items-center bg-slate-800">
+      <div className="mx-auto container flex p-4 mt-8 gap-8 items-center bg-slate-800">
         <img
           src={user.avatar_url}
           alt=""
@@ -41,10 +42,7 @@ function ProfileData() {
       </div>
       <div className="grid grid-cols-3 gap-8 container mx-auto mt-8 font-mono">
         {repos.map((repo) => (
-          <section key={repo.id} className='bg-teal-800 rounded'>
-            <h3 className='text-lg'>/{repo.name}</h3>
-            <p>Criado em: {new Date(repo.created_at).toLocaleDateString("pt-BR")}</p>
-          </section>
+          <RepoCard key={repo.id} repo={repo} />
         ))}
       </div>
     </>
