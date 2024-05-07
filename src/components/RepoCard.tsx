@@ -37,7 +37,7 @@ function RepoCard(repo: any) {
       </section>
       <div className='flex flex-col items-center'>
         <p className="text-4xl">{icon}</p>
-        <p className='text-xs'>{repo.repo.language}</p>
+        <p className='text-xs'>{repo.repo.language}</p> 
       </div>
     </div>
   );
