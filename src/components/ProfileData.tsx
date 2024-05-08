@@ -40,7 +40,7 @@ function ProfileData() {
           </p>
         </section>
       </div>
-      <div className="grid grid-cols-3 gap-8 container mx-auto mt-8 font-mono">
+      <div className="grid grid-cols-3 gap-6 container mx-auto mt-8 font-mono">
         {repos.map((repo) => (
           <RepoCard key={repo.id} repo={repo} />
         ))}
